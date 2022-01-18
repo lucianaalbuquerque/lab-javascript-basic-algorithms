@@ -34,3 +34,23 @@ if (a > b) {
 } else {
     console.log("What?! You both have the same name?")
 }
+
+//BONUS 1
+
+let lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut congue tellus. Aliquam lectus turpis, malesuada vel consequat vitae, condimentum ut neque. Sed ultricies turpis nec ante vulputate bibendum. Mauris vehicula, metus id condimentum tristique, leo nulla feugiat lacus, nec bibendum tortor massa vel purus. Nullam bibendum nec ipsum pretium tincidunt. Nam et volutpat lacus, a luctus orci. Nam ornare volutpat nunc, sed pretium turpis rutrum eu. Mauris a lobortis mauris. Integer erat orci, commodo eget elit in, varius luctus lectus. Ut quis ullamcorper dui. Vivamus eget mi a quam suscipit dapibus vitae sed odio. Etiam fringilla, nisi at varius scelerisque, odio eros malesuada libero, maximus condimentum diam enim quis est. Sed dolor mi, volutpat vel est sed, maximus aliquam purus. Mauris nibh libero, fringilla sed auctor sit amet, pulvinar id elit. Donec interdum non arcu quis dictum. Praesent varius lacinia augue. In est mi, congue nec mi eu, congue auctor lacus. Maecenas viverra, augue eget blandit molestie, elit erat aliquam elit, id convallis tellus tellus et sem. Donec efficitur augue leo, sit amet maximus eros ultrices et. Integer vel velit a ipsum lobortis pharetra. Curabitur vel blandit eros. Curabitur vitae quam porttitor, pellentesque ex in, accumsan magna. In hac habitasse platea dictumst. Donec felis justo, tempus sed rhoncus et, fringilla nec turpis. Suspendisse vel vestibulum arcu, vitae maximus ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis commodo, lacus eu imperdiet dictum, erat leo laoreet eros, quis finibus nisl mauris at enim. Morbi fringilla odio vitae erat ullamcorper posuere finibus eu ipsum. Vivamus accumsan elementum felis, a hendrerit lacus ultrices et. Donec aliquet ex ex, nec faucibus quam porta vitae. Praesent fermentum accumsan lobortis. Sed enim est, iaculis sit amet felis in, bibendum accumsan ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus malesuada enim at euismod."
+
+function countWords(stringToSplit, separator) {
+    var arrayOfStrings = stringToSplit.split(separator);
+    console.log('This text has ' + arrayOfStrings.length + ' words.');
+  }
+  function countEt(stringToSplit, separator) {
+    var arrayOfStrings = stringToSplit.split(separator);
+    console.log('This text has ' + arrayOfStrings.length + ' times the word \"et\"');
+  }
+  var space = ' ';
+  var wordEt = 'et '
+  
+  countWords(lorem, space);
+  
+  countEt(lorem, wordEt);
+  
