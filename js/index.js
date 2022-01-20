@@ -21,19 +21,19 @@ for (letter of hacker1) {
 }
 
 //3.2
-let a = hacker1.localeCompare(hacker2);
-console.log(a)
-
-let b = hacker2.localeCompare(hacker1);
-console.log(b)
-
-if (a > b) {
-  console.log("The driver's name goes first.")
-} else if (a < b) {
-  console.log("Yo, the navigator goes first definitely.")
-} else {
-    console.log("What?! You both have the same name?")
+let navigatorName = ""
+for (i = hacker2.length -1; i >= 0; i-- ) {
+  navigatorName += hacker2[i];
 }
+
+//3.3
+if (hacker1.localeCompare(hacker2) === 1) {
+  console.log("The driver's name goes first.");
+    } else if (hacker1.localeCompare(hacker2) === 0) {
+    console.log("Yo, the navigator goes first definitely.");
+  } else if (hacker1.localeCompare(hacker2)=== -1) {
+    console.log ("What?! You both have the same name?")
+  };
 
 //BONUS 1
 
@@ -53,4 +53,52 @@ function countWords(stringToSplit, separator) {
   countWords(lorem, space);
   
   countEt(lorem, wordEt);
+
+  //BONUS 2
+/*
+"A man, a plan, a canal, Panama!"
+"Amor, Roma"
+"race car"
+*/
+
+let phraseToCheck = '';
+
+console.log(phraseToCheck[3])
+
+  let normalTxt = ''
+  for (let i=0; i <= phraseToCheck.length; i++) {
+    switch (phraseToCheck[i]) {
+      case 'a':
+      case 'b':
+      case 'c':
+      case 'd':
+      case 'e':
+      case 'f':
+      case 'g':
+      case 'h':
+      case 'i':
+      case 'j':
+      case 'k':
+      case 'l':
+      case 'm':
+      case 'n':
+      normalTxt += phraseToCheck[i];
+      break
+    }
+  }
+
   
+
+  let inverseTxt = ""
+  for (i = phraseToCheck.length -1; i >= 0; i-- ) {
+    inverseTxt += phraseToCheck[i];
+  }
+
+  console.log(inverseTxt.toUpperCase())
+  console.log(phraseToCheck.toUpperCase())
+
+if (phraseToCheck.toUpperCase() == inverseTxt.toUpperCase()) {
+  console.log('Its a palindrome') 
+} else {
+  console.log('Its not a palindrome')
+}
